@@ -110,14 +110,14 @@ jobs:
 
     - name: Zip Files
       run: |
-        gzip ./openwrt/bin/targets/x86/generic/openwrt-x86-generic-squashfs-combined.img
+        gzip ./openwrt/bin/targets/x86/generic/openwrt-x86-generic-generic-squashfs-combined.img
     
     - name: Assemble Artifact
       id: assemble_artifact
       run: |
         rm -rf ./artifact/
         mkdir -p ./artifact/
-        cp ./openwrt/bin/targets/x86/generic/openwrt-x86-generic-squashfs-combined.img* ./artifact/
+        cp ./openwrt/bin/targets/x86/generic/openwrt-x86-generic-generic-squashfs-combined.img* ./artifact/
         cp ./openwrt/.config ./artifact/
         zip -r artifact.zip ./artifact/
         release_tag="Openwrt-X86-generic-$(date +%Y-%m-%d)"
