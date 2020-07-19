@@ -72,6 +72,8 @@ jobs:
         git clone https://github.com/ywt114/Lienol-obsolete.git
         mv Lienol-obsolete/luci-app-passwall/ ./lean
         rm -rf Lienol-obsolete/
+        git clone https://github.com/project-openwrt/luci-app-koolproxyR.git
+        mv luci-app-koolproxyR/ ./lean
     #    git clone https://github.com/garypang13/luci-app-eqos.git
     #    mv luci-app-eqos/ ./lean
     #    git clone https://github.com/vernesong/OpenClash.git
