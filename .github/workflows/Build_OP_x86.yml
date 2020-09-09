@@ -11,8 +11,8 @@ on:
   #    - '.github/workflows/Build_OP_x86.yml'
   #schedule:
   #  - cron: 0 9 * * 5
-  #watch:
-  #  types: [started]
+  watch:
+    types: [started]
 
 jobs:
   build:
