@@ -69,8 +69,9 @@ jobs:
       working-directory: ./openwrt
       run: |
         cd package
-        git clone https://github.com/Lienol/openwrt-package.git
+        git clone https://github.com/xiaorouji/openwrt-package.git
         mv openwrt-package/lienol/luci-app-passwall/ ./lean
+        rm -rf openwrt-package/
         git clone https://github.com/project-openwrt/luci-app-koolproxyR.git
         mv luci-app-koolproxyR/ ./lean
         git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
