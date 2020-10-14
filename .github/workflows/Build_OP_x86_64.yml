@@ -58,6 +58,7 @@ jobs:
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
         sed -i -E 's/#(src-git.+)(helloworld.+)/\1\2/' feeds.conf.default
+        sed -i '/(<%=pcdata(ver.luciversion)%>)/a\      built by ywt114' ./package/lean/autocore/files/index.htm
 
     - name: Update & Install feeds
       working-directory: ./openwrt
@@ -93,10 +94,10 @@ jobs:
         chmod +x ./customize.sh && ./customize.sh
         cd openwrt && make defconfig
 
-    - name: Mods
-      working-directory: ./openwrt
-      run: |
-        git apply ../enable_autocore.diff
+    #- name: Mods
+    #  working-directory: ./openwrt
+    #  run: |
+    #    git apply ../enable_autocore.diff
 
     - name: Download package
       working-directory: ./openwrt
