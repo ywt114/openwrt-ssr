@@ -71,6 +71,8 @@ jobs:
         cd package
         git clone https://github.com/xiaorouji/openwrt-package.git
         mv openwrt-package/lienol/luci-app-passwall/ ./lean
+        git clone https://github.com/project-openwrt/luci-app-unblockneteasemusic.git
+        mv luci-app-unblockneteasemusic/ ./lean
         git clone https://github.com/project-openwrt/luci-app-koolproxyR.git
         mv luci-app-koolproxyR/ ./lean
         git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
