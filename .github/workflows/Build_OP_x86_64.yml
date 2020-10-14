@@ -94,11 +94,6 @@ jobs:
         chmod +x ./customize.sh && ./customize.sh
         cd openwrt && make defconfig
 
-    #- name: Mods
-    #  working-directory: ./openwrt
-    #  run: |
-    #    git apply ../enable_autocore.diff
-
     - name: Download package
       working-directory: ./openwrt
       run: |
